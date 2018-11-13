@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".SimpleTransitionActivity"/>
         <activity android:name=".SimpleSceneActivity"/>
+        <activity android:name=".SimpleDemo1Activity"/>
     </application>
 
 </manifest>

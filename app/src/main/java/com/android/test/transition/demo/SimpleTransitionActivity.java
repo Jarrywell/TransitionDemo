@@ -14,7 +14,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 /**
- * des:
+ * des:TransitionManager.beginDelayedTransition()原理则是通过代码改变view的属性创造start scene和end scene
+ *
  * author: libingyan
  * Date: 18-11-12 15:32
  */

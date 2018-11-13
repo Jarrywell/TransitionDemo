@@ -25,5 +25,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, SimpleSceneActivity.class));
             }
         });
+
+        findViewById(R.id.btn_test_transition_demo1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SimpleDemo1Activity.class));
+            }
+        });
     }
 }

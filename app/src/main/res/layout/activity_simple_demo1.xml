@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_simple_demo1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/btn_target_view_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:src="@mipmap/ic_launcher"
+        android:foreground="#55ff0000"
+        />
+
+    <ImageView
+        android:id="@+id/btn_target_view_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:src="@mipmap/ic_launcher"
+        android:foreground="#5500ff00"
+        />
+
+    <ImageView
+        android:id="@+id/btn_target_view_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:src="@mipmap/ic_launcher"
+        android:foreground="#550000ff"
+        />
+
+    <ImageView
+        android:id="@+id/btn_target_view_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:src="@mipmap/ic_launcher"
+        android:foreground="#5500ffff"
+        />
+
+</FrameLayout>
