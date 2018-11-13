@@ -9,7 +9,7 @@
     </style>
 
     <style name="TestTransitionTheme" parent="AppTheme">
-        <!--<item name="android:windowActivityTransitions">true</item>-->
+        <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">false</item>
         <item name="android:windowAllowReturnTransitionOverlap">false</item>
     </style>

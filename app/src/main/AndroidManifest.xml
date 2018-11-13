@@ -27,6 +27,9 @@
 
         <activity android:name=".share_element_transition.ShareElementTransitionA" android:theme="@style/TestTransitionTheme"/>
         <activity android:name=".share_element_transition.ShareElementTransitionB" android:theme="@style/TestTransitionTheme"/>
+
+        <activity android:name=".fragment.TestFragmentActivity"/>
+
     </application>
 
 </manifest>

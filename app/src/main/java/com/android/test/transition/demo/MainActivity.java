@@ -2,6 +2,7 @@ package com.android.test.transition.demo;
 
 import com.android.test.transition.demo.content_transition.ContentTransitionA;
 import com.android.test.transition.demo.content_transition.ContentTransitionB;
+import com.android.test.transition.demo.fragment.TestFragmentActivity;
 import com.android.test.transition.demo.share_element_transition.ShareElementTransitionA;
 
 import android.content.Intent;
@@ -56,5 +57,15 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, ShareElementTransitionA.class));
                 }
             });
+
+        findViewById(R.id.btn_test_fragment_transition).setOnClickListener(
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(MainActivity.this, TestFragmentActivity.class));
+                }
+            });
+
+
     }
 }

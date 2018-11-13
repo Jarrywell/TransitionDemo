@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:transitionName="shared_view_01"
         android:textAllCaps="false"
         android:text="start activity B"
         android:gravity="center"
