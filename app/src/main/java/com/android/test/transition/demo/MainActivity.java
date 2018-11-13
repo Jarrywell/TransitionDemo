@@ -12,10 +12,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btn_test_auto).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_test_transition).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, SimpleTransitionActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_test_scene).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SimpleSceneActivity.class));
             }
         });
     }

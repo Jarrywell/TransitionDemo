@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SimpleTransitionActivity"/>
+        <activity android:name=".SimpleSceneActivity"/>
     </application>
 
 </manifest>
