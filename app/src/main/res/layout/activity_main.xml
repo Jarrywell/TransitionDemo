@@ -40,6 +40,24 @@
             android:text="测试Demo1"
             android:layout_marginBottom="10dp"
             />
+
+        <Button
+            android:id="@+id/btn_test_content_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="测试Content Transition"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_test_share_element_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="测试Share Element Transition"
+            android:layout_marginBottom="10dp"
+            />
     </LinearLayout>
 
 </ScrollView>
