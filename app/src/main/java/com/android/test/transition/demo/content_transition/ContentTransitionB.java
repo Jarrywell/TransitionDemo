@@ -20,9 +20,23 @@ public class ContentTransitionB extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content_transition_b);
 
-        Transition transition = TransitionInflater.from(this)
+        /**
+         * 触发场景：ContentTransitionA -> ContentTransitionB (startActivity)
+         * A.ExitTransition() -> B.EnterTransition()
+         */
+        Transition enterTransition = TransitionInflater.from(this)
             .inflateTransition(R.transition.content_transition_b_enter_bottom);
+        getWindow().setEnterTransition(enterTransition);
 
-        getWindow().setEnterTransition(transition);
+        /**
+         * 触发场景：ContentTransitionB -> ContentTransitionA (Back)
+         * B.ReturnTransition()
+         *
+         * 注意这里ReturnTransition()实现了view分两个方向退出（参考transition文件）
+         * 另外在布局文件中需要将分割的viewGroup指定android:transitionGroup="true"，否则不生效
+         */
+        Transition exitTransition = TransitionInflater.from(this)
+            .inflateTransition(R.transition.content_transition_b_exit_top_bottom);
+        getWindow().setReturnTransition(exitTransition);
     }
 }

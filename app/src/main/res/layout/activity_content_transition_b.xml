@@ -7,25 +7,45 @@
     android:orientation="horizontal"
     >
 
-    <View
+    <LinearLayout
+        android:id="@+id/id_group_top"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#55ff0000"/>
-    <View
+        android:transitionGroup="true"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#55ff0000"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#5500ff00"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_group_bottom"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#5500ff00"/>
-    <View
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#550000ff"/>
-    <View
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:foreground="#55ffff00"/>
+        android:transitionGroup="true"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#550000ff"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="#55ffff00"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
