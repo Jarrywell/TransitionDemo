@@ -1,6 +1,7 @@
 package com.android.test.transition.demo.fragment;
 
 import com.android.test.transition.demo.R;
+import com.android.test.transition.demo.share_element_transition.MySharedElementCallback;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,6 +21,11 @@ public class TransitionFragment2 extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        /**
+         * 同ShareElementTransitionB,但回调函数有差异
+         */
+        setEnterSharedElementCallback(new MySharedElementCallback("Fragment2"));
     }
 
     @Nullable

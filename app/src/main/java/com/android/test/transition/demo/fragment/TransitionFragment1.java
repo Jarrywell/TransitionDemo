@@ -1,6 +1,7 @@
 package com.android.test.transition.demo.fragment;
 
 import com.android.test.transition.demo.R;
+import com.android.test.transition.demo.share_element_transition.MySharedElementCallback;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -51,6 +52,11 @@ public class TransitionFragment1 extends Fragment {
                     .commit();
             }
         });
+
+        /**
+         * 同ShareElementTransitionA,但回调函数有差异
+         */
+        setExitSharedElementCallback(new MySharedElementCallback("Fragment1"));
 
         return view;
     }

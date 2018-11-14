@@ -9,7 +9,16 @@
     </style>
 
     <style name="TestTransitionTheme" parent="AppTheme">
+
+        <!--允许使用transitions-->
         <item name="android:windowActivityTransitions">true</item>
+
+        <!--允许使用transitions-->
+        <item name="android:windowContentTransitions">true</item>
+
+        <!--不然会出现白屏哦-->
+        <item name="android:windowIsTranslucent">true</item>
+
         <item name="android:windowAllowEnterTransitionOverlap">false</item>
         <item name="android:windowAllowReturnTransitionOverlap">false</item>
     </style>

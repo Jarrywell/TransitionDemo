@@ -6,6 +6,9 @@ import android.support.transition.ArcMotion;
 import android.support.transition.ChangeBounds;
 import android.support.transition.ChangeImageTransform;
 import android.support.transition.ChangeTransform;
+import android.support.transition.Slide;
+import android.support.transition.Transition;
+import android.support.transition.TransitionInflater;
 import android.support.transition.TransitionManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
@@ -115,14 +118,14 @@ public class SimpleTransitionActivity extends AppCompatActivity {
                 /**
                  * ArcMotion
                  */
-                ChangeBounds changeBoundsPath = new ChangeBounds();
+                /*ChangeBounds changeBoundsPath = new ChangeBounds();
                 changeBoundsPath.setDuration(500);
                 changeBoundsPath.setPathMotion(new ArcMotion());
                 TransitionManager.beginDelayedTransition(mParentView, changeBoundsPath);
 
                 FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) mTargetView.getLayoutParams();
                 layoutParams.gravity = mIndex % 2 == 0 ? Gravity.BOTTOM : Gravity.TOP;
-                mTargetView.setLayoutParams(layoutParams);
+                mTargetView.setLayoutParams(layoutParams);*/
 
 
                 /**
@@ -146,6 +149,22 @@ public class SimpleTransitionActivity extends AppCompatActivity {
                 FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) mTargetView.getLayoutParams();
                 layoutParams.gravity = Gravity.BOTTOM;
                 mTargetView.setLayoutParams(layoutParams);*/
+
+                /**
+                 * 自定义Transition
+                 */
+                //代码实现
+                /*Transition testSlideTransition = new TestSlideTransition();
+                testSlideTransition.setDuration(500);
+                TransitionManager.beginDelayedTransition(mParentView, testSlideTransition);
+                mTargetView.setVisibility(mIndex % 2 == 0 ? View.GONE : View.VISIBLE);*/
+
+                /**
+                 * XML中的自定义Transition 跑不起来!!不支持在xml中使用自定义transition
+                 */
+                /*Transition transition = TransitionInflater.from(SimpleTransitionActivity.this).inflateTransition(R.transition.test_transition);
+                TransitionManager.beginDelayedTransition(mParentView, transition);
+                mTargetView.setVisibility(mIndex % 2 == 0 ? View.GONE : View.VISIBLE);*/
 
                 mIndex++;
             }
