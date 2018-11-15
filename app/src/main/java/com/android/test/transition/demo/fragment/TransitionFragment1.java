@@ -2,13 +2,16 @@ package com.android.test.transition.demo.fragment;
 
 import com.android.test.transition.demo.R;
 import com.android.test.transition.demo.share_element_transition.MySharedElementCallback;
+import com.android.test.transition.demo.transitions.ChangeBackgroundTransition;
+import com.android.test.transition.demo.transitions.ChangeTextTransition;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.transition.ChangeBounds;
-import android.support.transition.Slide;
-import android.support.v4.app.Fragment;
+import android.transition.ChangeBounds;
+import android.transition.Slide;
+import android.transition.TransitionSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +44,14 @@ public class TransitionFragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment fragment2 = new TransitionFragment2();
-                fragment2.setSharedElementEnterTransition(new ChangeBounds());
+
+                TransitionSet transitions = new TransitionSet();
+                transitions.setDuration(1000)
+                    .addTransition(new ChangeBounds())
+                    .addTransition(new ChangeTextTransition())
+                    .addTransition(new ChangeBackgroundTransition());
+
+                fragment2.setSharedElementEnterTransition(transitions);
                 fragment2.setEnterTransition(new Slide(Gravity.RIGHT));
 
                 getFragmentManager()

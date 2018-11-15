@@ -21,6 +21,7 @@
         <activity android:name=".SimpleTransitionActivity"/>
         <activity android:name=".SimpleSceneActivity"/>
         <activity android:name=".SimpleDemo1Activity"/>
+        <activity android:name=".MyTransitionActivity"/>
 
         <activity android:name=".content_transition.ContentTransitionA" android:theme="@style/TestTransitionTheme"/>
         <activity android:name=".content_transition.ContentTransitionB" android:theme="@style/TestTransitionTheme"/>

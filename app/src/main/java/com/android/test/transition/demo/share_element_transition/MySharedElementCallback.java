@@ -1,10 +1,10 @@
 package com.android.test.transition.demo.share_element_transition;
 
+import android.app.SharedElementCallback;
 import android.content.Context;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.os.Parcelable;
-import android.support.v4.app.SharedElementCallback;
 import android.util.Log;
 import android.view.View;
 
@@ -15,6 +15,8 @@ import java.util.Map;
  * des:
  * author: libingyan
  * Date: 18-11-14 17:39
+ *
+ * https://www.jianshu.com/p/fa1c8deeaa57
  *
  * 此处的回调时序分两种情况：A -> B(start activity), B -> A(back)
  *

@@ -1,12 +1,14 @@
 package com.android.test.transition.demo.share_element_transition;
 
 import com.android.test.transition.demo.R;
+import com.android.test.transition.demo.transitions.ChangeBackgroundTransition;
+import com.android.test.transition.demo.transitions.ChangeTextTransition;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.ChangeBounds;
-import android.transition.Transition;
+import android.transition.TransitionSet;
 
 /**
  * des:
@@ -20,9 +22,15 @@ public class ShareElementTransitionB extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share_element_transition_b);
 
-        Transition transition = new ChangeBounds();
-        transition.setDuration(1000);
-        getWindow().setSharedElementEnterTransition(transition);
+
+        TransitionSet transitions = new TransitionSet();
+        transitions.setDuration(300)
+            .addTransition(new ChangeBounds())
+            .addTransition(new ChangeTextTransition())
+            .addTransition(new ChangeBackgroundTransition());
+
+        getWindow().setSharedElementEnterTransition(transitions);
+        //getWindow().setSharedElementReturnTransition(transitions);
 
         /**
          * EnterSharedElementCallback()在ShareElementTransitionB启动时触发B.enter()

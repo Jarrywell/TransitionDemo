@@ -33,15 +33,6 @@
             />
 
         <Button
-            android:id="@+id/btn_test_transition_demo1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="测试Demo1"
-            android:layout_marginBottom="10dp"
-            />
-
-        <Button
             android:id="@+id/btn_test_content_transition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,6 +58,35 @@
             android:text="测试Fragment Transition"
             android:layout_marginBottom="10dp"
             />
+
+        <Button
+            android:id="@+id/btn_test_my_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="测试自定义Transition"
+            android:layout_marginBottom="10dp"
+            />
+
+
+        <Button
+            android:id="@+id/btn_test_transition_demo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Demo1"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_test_demo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Demo2"
+            android:layout_marginBottom="10dp"
+            />
+
     </LinearLayout>
 
 </ScrollView>

@@ -19,7 +19,9 @@
         android:transitionName="shared_view_01"
         android:textAllCaps="false"
         android:text="start activity B"
-        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="#ff0000ff"
+        android:gravity="top|center_horizontal"
         android:background="#ff0000"/>
 
 
