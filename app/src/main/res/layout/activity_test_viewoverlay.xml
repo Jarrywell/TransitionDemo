@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_viewoverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:id="@+id/id_test_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="this is view overlay test"
+            android:textColor="#ffffff"
+            android:background="#0000ff"
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/id_overlay_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/id_test_viewgroup_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+    </FrameLayout>
+
+</LinearLayout>

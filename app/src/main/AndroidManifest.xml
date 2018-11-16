@@ -30,6 +30,7 @@
         <activity android:name=".share_element_transition.ShareElementTransitionB" android:theme="@style/TestTransitionTheme"/>
 
         <activity android:name=".fragment.TestFragmentActivity"/>
+        <activity android:name=".viewoverlay.TestViewOverlayActivity"/>
 
     </application>
 

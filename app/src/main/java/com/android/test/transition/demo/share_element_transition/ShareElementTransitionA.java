@@ -14,7 +14,46 @@ import android.transition.TransitionSet;
 import android.view.View;
 
 /**
- * des:
+ * activity间动画的回调（在Transition中的captureStartValues()打印的的堆栈）
+ *
+ * 可以看到其实系统内部还对transition做了处理,而不仅仅是表面上的animator封装
+ *
+ * at com.android.test.transition.demo.transitions.ChangeTextTransition.captureValues(ChangeTextTransition.java:46)
+ * at com.android.test.transition.demo.transitions.ChangeTextTransition.captureStartValues(ChangeTextTransition.java:33)
+ * at android.transition.TransitionSet.captureStartValues(TransitionSet.java:443)
+ * at android.transition.TransitionSet.captureStartValues(TransitionSet.java:443)
+ * at android.transition.TransitionSet.captureStartValues(TransitionSet.java:443)
+ * at android.transition.Transition.captureHierarchy(Transition.java:1578)
+ * at android.transition.Transition.captureHierarchy(Transition.java:1608)
+ * at android.transition.Transition.captureHierarchy(Transition.java:1608)
+ * at android.transition.Transition.captureHierarchy(Transition.java:1608)
+ * at android.transition.Transition.captureHierarchy(Transition.java:1608)
+ * at android.transition.Transition.captureHierarchy(Transition.java:1608)
+ * at android.transition.Transition.captureHierarchy(Transition.java:1608)
+ * at android.transition.Transition.captureValues(Transition.java:1464)
+ * at android.transition.TransitionManager.sceneChangeSetup(TransitionManager.java:324)
+ * at android.transition.TransitionManager.beginDelayedTransition(TransitionManager.java:423)
+ * at android.app.EnterTransitionCoordinator.beginTransition(EnterTransitionCoordinator.java:548)
+ * at android.app.EnterTransitionCoordinator.startSharedElementTransition(EnterTransitionCoordinator.java:397)
+ * at android.app.EnterTransitionCoordinator.-wrap4(EnterTransitionCoordinator.java)
+ * at android.app.EnterTransitionCoordinator$5$1$1.run(EnterTransitionCoordinator.java:459)
+ * at android.app.ActivityTransitionCoordinator.startTransition(ActivityTransitionCoordinator.java:775)
+ * at android.app.EnterTransitionCoordinator$5$1.onPreDraw(EnterTransitionCoordinator.java:456)
+ * at android.view.ViewTreeObserver.dispatchOnPreDraw(ViewTreeObserver.java:944)
+ * at android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:2231)
+ * at android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1272)
+ * at android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6445)
+ * at android.view.Choreographer$CallbackRecord.run(Choreographer.java:885)
+ * at android.view.Choreographer.doCallbacks(Choreographer.java:697)
+ * at android.view.Choreographer.doFrame(Choreographer.java:633)
+ * at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:871)
+ * at android.os.Handler.handleCallback(Handler.java:751)
+ * at android.os.Handler.dispatchMessage(Handler.java:95)
+ * at android.os.Looper.loop(Looper.java:154)
+ * at android.app.ActivityThread.main(ActivityThread.java:6348)
+ * at java.lang.reflect.Method.invoke(Native Method)
+ * at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:920)
+ * at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:810)
  * author: libingyan
  * Date: 18-11-13 14:12
  */

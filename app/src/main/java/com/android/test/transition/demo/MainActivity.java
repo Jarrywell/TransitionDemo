@@ -3,6 +3,7 @@ package com.android.test.transition.demo;
 import com.android.test.transition.demo.content_transition.ContentTransitionA;
 import com.android.test.transition.demo.fragment.TestFragmentActivity;
 import com.android.test.transition.demo.share_element_transition.ShareElementTransitionA;
+import com.android.test.transition.demo.viewoverlay.TestViewOverlayActivity;
 
 import android.content.Intent;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -80,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, SimpleDemo1Activity.class));
+            }
+        });
+
+        findViewById(R.id.btn_test_overlay).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestViewOverlayActivity.class));
             }
         });
 
